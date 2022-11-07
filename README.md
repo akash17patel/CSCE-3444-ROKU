@@ -1,6 +1,8 @@
 # CSCE-3444-ROKU
 Simple HTML, CSS, JS ROKU web application.
 
+**Set both "".html" and "images" folder in one folder
+
 
 -Prototype and still trying to make it better in every way possible.
 
