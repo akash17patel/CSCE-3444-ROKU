@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title>ROKU</title>
+        <style>
+            article {
+                height: auto;
+                max-width: 100%;
+                display: flex;
+            }
+
+            body{
+                background-image:url('images/roku bg.png');
+                background-attachment:fixed;
+                background-repeat: no-repeat;
+                background-size: cover;
+            }
+
+            .logo {
+                position: fixed;
+                max-width: 15%;
+                height: auto;
+                top: 20;
+                left: 20;
+            }
+
+            .carrousel {
+                display: grid;
+                grid-template-rows: repeat(2, 1fr);
+                grid-template-columns: repeat(3, 20vw);
+                grid-gap: 1.2rem;
+                overscroll-behavior-x: auto;
+                scroll-snap-type: x mandatory;
+                scrollbar-width: none;
+                justify-content: end;
+                margin-top: 6%;
+            }
+            .card {
+                box-shadow: 2px 4px 8px 6px rgba(255, 255, 255, 0.649);
+                transition: 0.1s;
+                border-radius: 10px;
+                overflow: hidden;
+                margin-block: auto;
+            }
+            .card:hover {
+                box-shadow: 0 8px 16px 0 rgb(255, 255, 255);
+                transform: scale(1.02);
+
+            }
+
+            img {
+                border-radius: 10px 10px 10px 10px;
+                max-width: 100%;
+                height: auto;
+
+            }
+            .timee {
+                color: white;
+                font-size: 18px;
+                font-weight: bold;
+                float: right;
+                margin-right: 2%;
+                margin-top: 3%;
+            }
+
+            .settings {
+                position: fixed;
+                width: 25%;
+                margin-top: 6%;
+                margin-left: 4%;
+                color: white;
+                cursor: pointer;
+            }
+            .card2 {
+                transition: 0.1s;
+                border-radius: 10px;
+                overflow: hidden;
+                margin-block: auto;
+            }
+            .card2:hover {
+                color:rgb(0, 0, 0);
+                background-color: whitesmoke;
+                transition: color 0.1s ease;
+            }
+
+            .line {
+                margin-top: 9%;
+                min-width: 100%;
+            }
+
+            h2 {
+                margin-left: 8px;
+            }
+            
+        </style>
+    
+        <!--Time-->
+        <script type="text/javascript"> 
+            function display_c(){
+            var refresh=1000;
+            mytime=setTimeout('display_ct()',refresh)
+            }
+            
+            function display_ct() {
+                    var x = new Date()
+                    document.getElementById('ct').innerHTML = x;
+                    tt=display_c();
+            }
+
+            window.onload = maxWindow;
+
+            function maxWindow() {
+                window.moveTo(0, 0);
+
+                if (document.all) {
+                    top.window.resizeTo(screen.availWidth, screen.availHeight);
+                }
+
+                else if (document.layers || document.getElementById) {
+                    if (top.window.outerHeight < screen.availHeight || top.window.outerWidth < screen.availWidth) {
+                        top.window.outerHeight = screen.availHeight;
+                        top.window.outerWidth = screen.availWidth;
+                    }
+                }
+            }
+        </script>
+    
+    </head>
+
+    <body onload=display_ct();>
+        <!--Roku logo and time-->
+        <div style="width:100%;position:fixed;top:10px;">
+            <img class="logo" src="images/roku logo.png">
+            <p class="timee">
+                <span id='ct'></span>
+            </p>
+        </div>
+
+        <!--Glow line across-->
+        <div class="line">
+            <hr class="card">
+        </div>
+
+        <!--Settings-->
+        <div class="settings">
+            <article class="card2";>
+                <h2>Home</h2>
+            </article>
+        </div>
+        <div class="settings" style="margin-top:11%";>
+            <article class="card2">
+                <h2>Featured Free</h2>
+            </article>
+        </div>
+        <div class="settings" style="margin-top:16%";>
+            <article class="card2">
+                <h2>Search</h2>
+            </article>
+        </div>
+        <div class="settings" style="margin-top:21%";>
+            <article class="card2">
+                <h2>Streaming Channels</h2>
+            </article>
+        </div>
+        <div class="settings" style="margin-top:26%";>
+            <article class="card2">
+                <h2>Settings</h2>
+            </article>
+        </div>
+
+        <!--Channels-->
+        <div class="carrousel">
+            <article class="card">
+                <a href="https://www.netflix.com/login" target="_self"> <img src="images/netflix.png"></a>
+            </article>
+            <article class="card">
+                <a href="https://www.youtube.com/" target="_self"> <img src="images/youtube.png"></a>
+            </article>
+            <article class="card">
+                <a href="https://www.hulu.com/welcome" target="_self"> <img src="images/hulu.png"></a>
+            </article>
+            <article class="card">
+                <a href="https://www.amazon.com/b/ref=atv_gs_intro_prime_b?_encoding=UTF8&node=2858778011" target="_self"> <img src="images/prime.png"></a>
+            </article>
+            <article class="card">
+                <a href="https://www.disneyplus.com/login" target="_self"> <img src="images/disney.png"></a>
+            </article>
+        </div>
+
+    </body>
+
+</html>
