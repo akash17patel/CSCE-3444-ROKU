@@ -92,6 +92,13 @@
             h2 {
                 margin-left: 8px;
             }
+            /* Style the button */
+            button {
+                padding: 20px;
+                font-size: 20px;
+                margin-top: 0%;
+                margin-right: 0%;
+            }
             
         </style>
     
@@ -106,6 +113,28 @@
                     var x = new Date()
                     document.getElementById('ct').innerHTML = x;
                     tt=display_c();
+            }
+
+            //full screen
+            var elem = document.documentElement;
+            function openFullscreen() {
+                if (elem.requestFullscreen) {
+                    elem.requestFullscreen();
+                } else if (elem.webkitRequestFullscreen) { /* Safari */
+                    elem.webkitRequestFullscreen();
+                } else if (elem.msRequestFullscreen) { /* IE11 */
+                    elem.msRequestFullscreen();
+                }
+            }
+
+            function closeFullscreen() {
+                if (document.exitFullscreen) {
+                    document.exitFullscreen();
+                } else if (document.webkitExitFullscreen) { /* Safari */
+                    document.webkitExitFullscreen();
+                } else if (document.msExitFullscreen) { /* IE11 */
+                    document.msExitFullscreen();
+                }
             }
         </script>
     
@@ -170,6 +199,9 @@
                 <a href="https://www.disneyplus.com/login" target="_self"> <img src="images/disney.png"></a>
             </article>
         </div>
+
+        <button onclick="openFullscreen();">Open Fullscreen</button>
+        <button onclick="closeFullscreen();">Close Fullscreen</button>
 
     </body>
 
