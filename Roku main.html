@@ -94,10 +94,20 @@
             }
             /* Style the button */
             button {
-                padding: 20px;
-                font-size: 20px;
-                margin-top: 0%;
-                margin-right: 0%;
+                padding: 10px;
+                font-size: 10px;
+            }
+
+            #bopen {
+                position: fixed;
+                bottom: 10px;
+                right: 120px;
+            }
+
+            #bclose {
+                position: fixed;
+                bottom: 10px;
+                right: 10px;
             }
             
         </style>
@@ -200,8 +210,12 @@
             </article>
         </div>
 
-        <button onclick="openFullscreen();">Open Fullscreen</button>
-        <button onclick="closeFullscreen();">Close Fullscreen</button>
+        <div id="bopen">
+            <button onclick="openFullscreen();">Open Fullscreen</button>
+        </div>
+        <div id="bclose">
+            <button onclick="closeFullscreen();">Close Fullscreen</button>
+        </div>
 
     </body>
 
