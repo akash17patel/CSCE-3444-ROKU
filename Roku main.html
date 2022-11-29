@@ -264,6 +264,17 @@
                     document.msExitFullscreen();
                 }
             }
+
+            //Exit
+            function myClick() {
+                if (document.exit){
+                    window.close();
+                }
+                else{
+                    window.close();
+                }
+                
+            }
         </script>
     
     </head>
@@ -336,7 +347,8 @@
                 <button onclick="closeFullscreen()">Close Fullscreen</button>
             </div>
             <div id="Exit">
-                <button onclick="window.close('Roku main.html') && exit()">Exit</button>
+                <!--<button onclick="window.close('Roku main.html') || exit() || stop()">Exit</button>-->
+                <button onclick="myClick()">Exit</button>
             </div>
         </div>
 
