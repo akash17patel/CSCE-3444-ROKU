@@ -19,7 +19,4 @@ Simple HTML, CSS, JS ROKU web application.
 Created by Akash Patel
 
 
-Timmy Akindunni
-
-
-Anuj Gajmer
+Team: Timmy Akindunni, Anuj Gajmer
